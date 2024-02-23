@@ -1,0 +1,24 @@
+
+global boolean = true
+
+local other_boolean = false
+
+local number = 123
+
+local float = 1.0
+
+global callback = () => {} 
+
+class MyClass {
+    local property = 'property'
+   
+    global constructor = () => {
+        print(this.property)
+    }
+
+    global __string__ = () => {
+        return "[MyClass] {this.property}"
+    }
+}
+
+local cls = new MyClass()
